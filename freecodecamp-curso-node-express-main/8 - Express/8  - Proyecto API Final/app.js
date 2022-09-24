@@ -7,6 +7,8 @@
 const express = require('express');
 const app = express();
 
+
+
 const {infoCursos} = require('./datos/cursos.js');
 
 // Routers
@@ -16,9 +18,11 @@ app.use('/api/cursos/programacion', routerProgramacion);
 const routerMatematicas = require('./routers/matematicas.js');
 app.use('/api/cursos/matematicas', routerMatematicas);
 
+
 // Routing
 app.get('/', (req, res) => {
-  res.send('Mi primer servidor con Express. Cursos 💻.');        
+   
+   res.send(`Mi primer servidor con Express. Cursos 💻.`);        
 });
 
 app.get('/api/cursos', (req, res) => {
